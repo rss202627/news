@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RSS News 2K26-27</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F1E6D0;--paper:#FBF6EA;--ink:#3B2518;--brown:#7A4A2B;--mu:#8A6F5A;--ln:#D9C7A6;
+--c1:#D9573B;--c2:#2F8F83;--c3:#E0A52B;--c4:#7B4B94;--c5:#5C8D3E;--c6:#2F6FB5;
+--fh:'Playfair Display',Georgia,'Times New Roman',serif;--fb:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);background-image:radial-gradient(#d9c7a688 1px,transparent 1px);background-size:18px 18px;color:var(--ink);font-family:var(--fb);font-size:clamp(1rem,.95rem + .2vw,1.1rem);line-height:1.6;overflow-x:hidden}
+.wrap{width:min(1120px,100% - clamp(2rem,6vw,4rem));margin-inline:auto}
+:focus-visible{outline:3px solid var(--c1);outline-offset:3px;border-radius:4px}
+.top{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-block:.9rem;font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mu);border-bottom:1px solid var(--ln)}
+.mast{padding-block:clamp(1.5rem,4vw,3rem) clamp(1rem,3vw,2rem);border-bottom:4px double var(--brown);position:relative}
+h1{font-family:var(--fh);font-weight:900;font-size:clamp(2.8rem,1rem + 10.5vw,8rem);line-height:.95;letter-spacing:-.02em;margin:0;display:flex;flex-wrap:wrap;align-items:baseline;gap:.15em .3em}
+h1 .yr{font-size:.38em;background:var(--brown);color:var(--paper);padding:.1em .35em;letter-spacing:0;transform:translateY(-.15em)}
+.wip{display:inline-block;margin-top:1.2rem;font-weight:700;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--c1);border:2px dashed var(--c1);padding:.35em .9em;border-radius:6px;transform:rotate(-2.5deg);background:#fff6;animation:pop .6s cubic-bezier(.2,.9,.3,1.4) both .3s}
+.sub{max-width:52ch;margin:1rem 0 0;color:var(--brown);font-size:1.1em}
+@keyframes pop{from{opacity:0;transform:rotate(-12deg) scale(.6)}}
+.bar{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;padding-block:1.4rem}
+.chip{font:inherit;font-weight:700;font-size:.9rem;cursor:pointer;border:2px solid var(--brown);background:transparent;color:var(--brown);padding:.35em 1em;border-radius:999px;transition:background .15s,color .15s}
+.chip[aria-pressed="true"]{background:var(--brown);color:var(--paper)}
+.note{margin:0 0 1.4rem;padding:.7rem 1rem;background:#E0A52B33;border-left:5px solid var(--c3);font-size:.95rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:clamp(1rem,2.5vw,1.6rem)}
+.card{position:relative;background:var(--paper);border:1px solid var(--ln);border-top:6px solid var(--a);border-radius:6px;padding:1.3rem 1.3rem 1.5rem;box-shadow:5px 5px 0 var(--ln);opacity:0;transform:translateY(18px);animation:up .6s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--i)*70ms)}
+@keyframes up{to{opacity:1;transform:none}}
+.card.lead{grid-column:1/-1;padding:clamp(1.4rem,4vw,2.6rem)}
+.meta{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;font-size:.8rem;color:var(--mu);font-weight:700;margin-bottom:.8rem}
+.tag{background:var(--a);color:#fff;padding:.15em .75em;border-radius:999px;letter-spacing:.04em}
+.smp{border:1px solid var(--mu);padding:.1em .6em;border-radius:4px;text-transform:uppercase;font-size:.7rem;letter-spacing:.1em}
+.card h2{font-family:var(--fh);font-weight:700;font-size:1.35rem;line-height:1.2;margin:0 0 .6rem}
+.card.lead h2{font-size:clamp(1.8rem,1.2rem + 2.6vw,3rem);font-weight:900;max-width:22ch}
+.card p{margin:0;color:#5a4030}
+.card.lead p{font-size:1.1em;max-width:58ch}
+.empty{grid-column:1/-1;text-align:center;color:var(--mu);padding:2rem}
+h3{font-family:var(--fh);font-size:clamp(1.5rem,1.1rem + 2vw,2.2rem);margin:3rem 0 1rem;border-bottom:2px solid var(--brown);padding-bottom:.4rem}
+.cm{background:var(--paper);border:1px solid var(--ln);border-radius:6px;padding:1.4rem;max-width:720px}
+.cm input,.cm textarea{width:100%;font:inherit;padding:.7em .9em;border:2px solid var(--ln);border-radius:6px;background:#f3ecdc;color:var(--mu);margin-bottom:.8rem}
+.cm button{font:inherit;font-weight:700;background:var(--ln);color:var(--mu);border:0;padding:.7em 1.4em;border-radius:999px}
+.cm p{margin:0 0 1rem;color:var(--brown);font-weight:500}
+footer{margin-top:3rem;padding-block:1.6rem 2.5rem;border-top:4px double var(--brown);font-size:.9rem;color:var(--mu);text-align:center}
+@media(prefers-reduced-motion:reduce){.card,.wip{animation:none;opacity:1;transform:none}.wip{transform:rotate(-2.5deg)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="top"><span>Vol. 1 · Batch 2026-27</span><span id="date"></span></div>
+<header class="mast">
+<h1>RSS News <span class="yr">2K26-27</span></h1>
+<span class="wip">Work in progress</span>
+<p class="sub">Recent news about our school and Class 10, written and managed by students.</p>
+</header>
+
+<main>
+<div class="bar" role="group" aria-label="Filter stories">
+<button class="chip" data-f="all" aria-pressed="true">All</button>
+<button class="chip" data-f="School" aria-pressed="false">School</button>
+<button class="chip" data-f="Class 10" aria-pressed="false">Class 10</button>
+</div>
+<p class="note">The stories below are samples. Student editors will post the real news soon.</p>
+<div class="grid" id="grid"></div>
+
+<h3>Comments</h3>
+<div class="cm">
+<p>Comments are coming soon. You will be able to react to stories right here.</p>
+<input type="text" placeholder="Your name" disabled aria-label="Your name">
+<textarea rows="3" placeholder="Write a comment" disabled aria-label="Comment"></textarea>
+<button type="button" disabled>Post comment</button>
+</div>
+</main>
+
+<footer>RSS News 2K26-27 · Managed by the students of RSS</footer>
+</div>
+<script>
+(function(){
+var COL=['--c1','--c2','--c3','--c4','--c5','--c6'];
+var STORIES=[
+{t:'Welcome to RSS News 2K26-27',c:'School',d:'25 Nov 2026',x:'This is the new home for news about our school and Class 10. Student editors will post updates here, so check back often.',s:1},
+{t:'Class 10 updates will appear here',c:'Class 10',d:'24 Nov 2026',x:'Exam dates, timetable changes and study notices for Class 10 will be shared in this spot.',s:1},
+{t:'School events and announcements',c:'School',d:'23 Nov 2026',x:'Assemblies, competitions and special days at school will be covered here with the latest details.',s:1},
+{t:'Results and achievements',c:'Class 10',d:'22 Nov 2026',x:'Class 10 wins, toppers and proud moments will be celebrated on this page.',s:1},
+{t:'Sports and club updates',c:'School',d:'21 Nov 2026',x:'Matches, practice sessions and club activities from around the school will be reported here.',s:1},
+{t:'Want to write for us?',c:'School',d:'20 Nov 2026',x:'RSS News is run by students. If you have a story to share, tell the editors and it could appear here.',s:1}];
+var grid=document.getElementById('grid'),cur='all';
+function render(){
+grid.innerHTML='';var n=0;
+STORIES.forEach(function(s,i){
+if(cur!=='all'&&s.c!==cur)return;
+var a=document.createElement('article');a.className='card'+(n===0?' lead':'');
+a.style.setProperty('--a','var('+COL[i%COL.length]+')');a.style.setProperty('--i',n);
+var m=document.createElement('div');m.className='meta';
+var tg=document.createElement('span');tg.className='tag';tg.textContent=s.c;m.appendChild(tg);
+var dt=document.createElement('span');dt.textContent=s.d;m.appendChild(dt);
+if(s.s){var sm=document.createElement('span');sm.className='smp';sm.textContent='Sample';m.appendChild(sm)}
+var h=document.createElement('h2');h.textContent=s.t;
+var p=document.createElement('p');p.textContent=s.x;
+a.appendChild(m);a.appendChild(h);a.appendChild(p);grid.appendChild(a);n++});
+if(!n){var e=document.createElement('p');e.className='empty';e.textContent='No stories here yet.';grid.appendChild(e)}
+}
+document.querySelectorAll('.chip').forEach(function(b){b.addEventListener('click',function(){
+cur=b.getAttribute('data-f');
+document.querySelectorAll('.chip').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});render()})});
+document.getElementById('date').textContent=new Date().toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+render();
+})();
+</script>
+</body>
+</html>
